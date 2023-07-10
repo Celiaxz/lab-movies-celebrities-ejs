@@ -1,0 +1,11 @@
+<h1>Movie Cast</h1>
+<form action="/movies/create" method="POST">
+  <label for="cast">Choose a cast:</label>
+  <select name="casts" id="casts" multiple>
+    <% celebrityItems.forEach(celebrity => { %>
+    <option value=<%- celebrity._id %> name="celeb"><%- celebrity.name %></option>
+    <% })%>
+  </select>
+  <p><input type="submit" value="Submit"></p>
+
+</form>
